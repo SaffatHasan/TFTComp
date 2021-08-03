@@ -1,0 +1,17 @@
+package main
+
+func setBit(n int, pos uint) int {
+	n |= (1 << pos)
+	return n
+}
+
+func unsetBit(n int, pos uint) int {
+	mask := ^(1 << pos)
+	n &= mask
+	return n
+}
+
+func hasBit(n int, pos uint) bool {
+	val := n & (1 << pos)
+	return val > 0
+}
